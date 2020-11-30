@@ -56,7 +56,7 @@ export class MapRectangle implements OnInit, OnDestroy {
    * developers.google.com/maps/documentation/javascript/reference/polygon#Rectangle.boundsChanged
    */
   @Output()
-  boundsChanged: Observable<void> = this._eventManager.getLazyEmitter<void>('bounds_changed');
+  boundsChanged: Observable<any> = this._eventManager.getLazyEmitter<any>(this.getBounds());
 
   /**
    * See
